@@ -21,6 +21,10 @@ class TestFileSystemDataset(unittest.TestCase):
             self.D.expect_file_to_be_csv_parseable("test_csv_parseable.csv"),
             {"success": True}
         )
+        self.assertEqual(
+            self.D.expect_file_to_be_csv_parseable("test_csv_half_parseable.csv"),
+            {"success": False}
+        )
 
 if __name__ == "__main__":
     unittest.main()
