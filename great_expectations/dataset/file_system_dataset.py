@@ -61,14 +61,34 @@ class FileSystemDataSet(MetaFileSystemDataSet):
         #FIXME: Needs a docstring.
         """
 
-        if 1:
-        # try:
+        try:
             pd.read_csv(self.filepath+filename)
             return {
                 "success" : True
             }
 
-        # except:
+        except:
+            return {
+                "success" : False
+            }
+
+
+    @DataSet.expectation(['filename'])
+    def expect_file_to_be_excel_parseable(self,
+        filename,
+        result_format=None, include_config=False, catch_exceptions=None, meta=None
+    ):
+        """
+        #FIXME: Needs a docstring.
+        """
+
+        try:
+            pd.read_excel(self.filepath+filename)
+            return {
+                "success" : True
+            }
+
+        except:
             return {
                 "success" : False
             }
