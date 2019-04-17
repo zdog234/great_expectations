@@ -640,7 +640,7 @@ WARNING: get_expectations_config discarded
     44 result_format kwargs
      0 include_config kwargs
      1 catch_exceptions kwargs
-If you wish to change this behavior, please set discard_failed_expectations, discard_result_format_kwargs, discard_include_configs_kwargs, and discard_catch_exceptions_kwargs appropirately.
+If you wish to change this behavior, please set discard_failed_expectations, discard_result_format_kwargs, discard_include_configs_kwargs, and discard_catch_exceptions_kwargs appropriately.
             """
             if any([discard_failed_expectations, discard_result_format_kwargs, discard_include_configs_kwargs, discard_catch_exceptions_kwargs]):
                 print("WARNING: get_expectations_config discarded")
@@ -656,7 +656,7 @@ If you wish to change this behavior, please set discard_failed_expectations, dis
                 if discard_catch_exceptions_kwargs:
                     print("\t%d catch_exceptions kwargs" %
                           discards["catch_exceptions"])
-                print("If you wish to change this behavior, please set discard_failed_expectations, discard_result_format_kwargs, discard_include_configs_kwargs, and discard_catch_exceptions_kwargs appropirately.")
+                print("If you wish to change this behavior, please set discard_failed_expectations, discard_result_format_kwargs, discard_include_configs_kwargs, and discard_catch_exceptions_kwargs appropriately.")
 
         config["expectations"] = expectations
         return config
